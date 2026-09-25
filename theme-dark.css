@@ -1,0 +1,161 @@
+/* =====================================================
+   THEME-DARK.CSS
+   Dark theme for Campus Event Board
+   ===================================================== */
+
+
+/* Dark theme variables */
+
+body:has(#theme-toggle:checked) {
+
+  --brand: #78aee0;
+  --brand-dark: #081522;
+  --accent: #ff9b7d;
+
+  --ink: #edf4fa;
+  --muted: #b7c5d3;
+  --paper: #101820;
+  --surface: #192633;
+  --border: #394b5c;
+
+}
+
+
+/* Body */
+
+body:has(#theme-toggle:checked) {
+  color: var(--ink);
+  background-color: var(--paper);
+}
+
+
+/* Header */
+
+body:has(#theme-toggle:checked) #site-header {
+  background-color: #07111b;
+}
+
+
+/* Navigation */
+
+body:has(#theme-toggle:checked) .site-nav {
+  background-color: #081522;
+}
+
+
+/* Hero */
+
+body:has(#theme-toggle:checked) .hero {
+  background-image:
+    linear-gradient(
+      rgb(0 0 0 / 55%),
+      rgb(0 0 0 / 55%)
+    ),
+    url("event-banner.jpg");
+}
+
+
+/* Event cards */
+
+body:has(#theme-toggle:checked) .event-card {
+  color: var(--ink);
+
+  background-color: var(--surface);
+
+  border-color: var(--border);
+}
+
+
+/* About section */
+
+body:has(#theme-toggle:checked) .about figure {
+  background-color: var(--surface);
+
+  border-color: var(--border);
+}
+
+
+/* Form */
+
+body:has(#theme-toggle:checked) .event-form {
+  background-color: var(--surface);
+
+  border-color: var(--border);
+}
+
+
+body:has(#theme-toggle:checked) .event-form input,
+body:has(#theme-toggle:checked) .event-form textarea {
+  color: var(--ink);
+
+  background-color: #111d28;
+
+  border-color: var(--border);
+}
+
+
+/* FAQ */
+
+body:has(#theme-toggle:checked) .faq details {
+  background-color: var(--surface);
+
+  border-color: var(--border);
+}
+
+
+/* Table */
+
+body:has(#theme-toggle:checked) table {
+  background-color: var(--surface);
+
+  border-color: var(--border);
+}
+
+
+body:has(#theme-toggle:checked) th,
+body:has(#theme-toggle:checked) td {
+  border-color: var(--border);
+}
+
+
+body:has(#theme-toggle:checked) tbody tr:nth-child(even) {
+  background-color: rgb(120 174 224 / 10%);
+}
+
+
+/* Headings */
+
+body:has(#theme-toggle:checked) .event-card h3,
+body:has(#theme-toggle:checked) .section-heading h2,
+body:has(#theme-toggle:checked) legend,
+body:has(#theme-toggle:checked) caption,
+body:has(#theme-toggle:checked) .faq summary {
+  color: #78aee0;
+}
+
+
+/* Muted text */
+
+body:has(#theme-toggle:checked) .event-card p,
+body:has(#theme-toggle:checked) .about figcaption {
+  color: #b7c5d3;
+}
+
+
+/* Footer */
+
+body:has(#theme-toggle:checked) footer {
+  background-color: #07111b;
+}
+
+
+/* Change theme icon */
+
+body:has(#theme-toggle:checked) .light-icon {
+  display: none;
+}
+
+
+body:has(#theme-toggle:checked) .dark-icon {
+  display: inline;
+}

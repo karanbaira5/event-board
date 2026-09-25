@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Campus Event Board</title>
+
+  <meta
+    name="description"
+    content="Campus Event Board for discovering and submitting campus events."
+  >
+  <link rel="shortcut icon" href="images.ico" type="image/x-icon">
+
+  <link rel="icon" href="event-banner.jpg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Campus Event Board">
+  <meta
+    property="og:description"
+    content="Discover upcoming campus events and submit new events."
+  >
+  <meta property="og:image" content="event-banner.jpg">
+
+  <!-- External CSS files -->
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme-dark.css">
+
+</head>
+
+
+<body>
+
+  <!-- Skip link for accessibility -->
+  <a href="#main" class="skip">Skip to content</a>
+
+
+  <!-- ================= HEADER ================= -->
+
+  <header id="site-header">
+
+    <div class="container">
+
+      <p class="eyebrow">IIIT Vadodara</p>
+
+      <h1>Campus Event Board</h1>
+
+      <p>
+        Discover workshops, competitions and activities happening
+        on campus.
+      </p>
+
+      <div class="theme-switcher">
+      <input type="checkbox" id="theme-toggle">
+
+      <label for="theme-toggle">
+        <span class="light-icon">☀️</span>
+        <span class="dark-icon">🌙</span>
+        Theme
+      </label>
+    </div>
+
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav class="site-nav" aria-label="Main navigation">
+
+    <div class="container">
+
+      <a class="active" href="#home">Home</a>
+      <a href="#events">Events</a>
+      <a href="#submit">Submit Event</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#faq">FAQ</a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- ================= MAIN ================= -->
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+      <div class="container">
+
+        <p class="eyebrow">Campus Life</p>
+
+        <h2>What's happening on campus?</h2>
+
+        <p>
+          Find upcoming events, workshops and activities in one place.
+        </p>
+
+        <a class="button" href="#events">
+          View Events
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= UPCOMING EVENTS ================= -->
+
+    <section id="events" class="events container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">Upcoming</p>
+
+        <h2>Upcoming Events</h2>
+
+        <p>
+          Explore our upcoming campus events.
+        </p>
+
+      </div>
+
+
+      <div class="event-grid">
+
+        <!-- Event 1 -->
+        <article class="event-card">
+
+          <p class="event-type">Technology</p>
+
+          <h3>AI & Machine Learning Workshop</h3>
+
+          <p>
+            Learn the basics of artificial intelligence and
+            machine learning through practical examples.
+          </p>
+
+          <p>
+            <strong>Date:</strong>
+            <time datetime="2026-09-28">
+              28 September 2026
+            </time>
+          </p>
+
+          <p>
+            <strong>Time:</strong> 10:00 AM
+          </p>
+
+          <p>
+            <strong>Venue:</strong> Seminar Hall
+          </p>
+
+          <a href="#submit">Register</a>
+
+        </article>
+
+
+        <!-- Event 2 -->
+        <article class="event-card">
+
+          <p class="event-type">Programming</p>
+
+          <h3>CodeSprint Challenge</h3>
+
+          <p>
+            Test your programming and problem-solving skills
+            in a competitive coding challenge.
+          </p>
+
+          <p>
+            <strong>Date:</strong>
+            <time datetime="2026-10-02">
+              2 October 2026
+            </time>
+          </p>
+
+          <p>
+            <strong>Time:</strong> 2:00 PM
+          </p>
+
+          <p>
+            <strong>Venue:</strong> Computer Lab
+          </p>
+
+          <a href="#submit">Register</a>
+
+        </article>
+
+
+        <!-- Event 3 -->
+        <article class="event-card">
+
+          <p class="event-type">Cultural</p>
+
+          <h3>Campus Cultural Evening</h3>
+
+          <p>
+            Enjoy music, performances and creative activities
+            presented by students.
+          </p>
+
+          <p>
+            <strong>Date:</strong>
+            <time datetime="2026-10-10">
+              10 October 2026
+            </time>
+          </p>
+
+          <p>
+            <strong>Time:</strong> 6:00 PM
+          </p>
+
+          <p>
+            <strong>Venue:</strong> Open Auditorium
+          </p>
+
+          <a href="#submit">Register</a>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= IMAGE / ABOUT ================= -->
+
+    <section class="about container">
+
+      <div>
+
+        <p class="eyebrow">About</p>
+
+        <h2>Campus Event Board</h2>
+
+        <h2 class="small-heading">Stay Connected</h2>
+
+        <p>
+          The Campus Event Board helps students discover
+          useful academic, technical and cultural activities.
+        </p>
+
+        <p>
+          Visit the
+          <a
+            href="https://www.iiitvadodara.ac.in"
+            target="_blank"
+            rel="noopener"
+          >
+            institute website
+          </a>
+          for more information.
+        </p>
+
+      </div>
+
+
+      <figure>
+
+        <img
+          src="event-banner.jpg"
+          alt="Students participating in a campus event"
+        >
+
+        <figcaption>
+          Students participating in a campus event.
+        </figcaption>
+
+      </figure>
+
+    </section>
+
+
+    <!-- ================= FORM ================= -->
+
+    <section id="submit" class="submit-section container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">Create</p>
+
+        <h2>Submit an Event</h2>
+
+        <p>
+          Fill in the form to submit a new campus event.
+        </p>
+
+      </div>
+
+
+      <form class="event-form" action="#" method="post">
+
+        <fieldset>
+
+          <legend>Event Information</legend>
+
+
+          <label for="event-name">
+            Event Name
+          </label>
+
+          <input
+            id="event-name"
+            name="event-name"
+            type="text"
+            placeholder="Enter event name"
+            required
+          >
+
+
+          <label for="email">
+            Organizer Email
+          </label>
+
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="student@example.com"
+            required
+          >
+
+
+          <label for="date">
+            Event Date
+          </label>
+
+          <input
+            id="date"
+            name="date"
+            type="date"
+            required
+          >
+
+
+          <label for="description">
+            Description
+          </label>
+
+          <textarea
+            id="description"
+            name="description"
+            rows="5"
+            placeholder="Describe your event"
+            required
+          ></textarea>
+
+
+          <button type="submit">
+            Submit Event
+          </button>
+
+        </fieldset>
+
+      </form>
+
+    </section>
+
+
+    <!-- ================= TABLE ================= -->
+
+    <section id="schedule" class="schedule container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">Schedule</p>
+
+        <h2>Event Schedule</h2>
+
+      </div>
+
+
+      <table>
+
+        <caption>
+          Campus event categories
+        </caption>
+
+        <thead>
+
+          <tr>
+            <th scope="col">Category</th>
+            <th scope="col">Day</th>
+            <th scope="col">Venue</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>Technology</td>
+            <td>Monday</td>
+            <td>Computer Lab</td>
+          </tr>
+
+          <tr>
+            <td>Programming</td>
+            <td>Tuesday</td>
+            <td>Programming Lab</td>
+          </tr>
+
+          <tr>
+            <td>Cultural</td>
+            <td>Friday</td>
+            <td>Auditorium</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+
+    <!-- ================= FAQ ================= -->
+
+    <section id="faq" class="faq container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">Help</p>
+
+        <h2>Frequently Asked Questions</h2>
+
+      </div>
+
+
+      <details>
+
+        <summary>
+          How can I submit an event?
+        </summary>
+
+        <p>
+          Fill in the Submit an Event form with the required
+          information and click Submit Event.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Can students attend campus events?
+        </summary>
+
+        <p>
+          Students can attend events according to the rules
+          specified by the event organizer.
+        </p>
+
+      </details>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <h2>Campus Event Board</h2>
+
+      <nav aria-label="Footer navigation">
+
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#submit">Submit Event</a>
+
+      </nav>
+
+      <address>
+        Contact:
+        <a href="mailto:karanbaira5775@gmail.com">
+          karanbaira5775@gmail.com
+        </a>
+      </address>
+
+      <p>
+        <small>
+          © 2026 Sankalp Campus Event Board
+        </small>
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
