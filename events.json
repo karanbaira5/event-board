@@ -1,0 +1,35 @@
+[
+  {
+    "id": "ai-ml-workshop",
+    "title": "AI & Machine Learning Workshop",
+    "category": "Technology",
+    "description": "Learn the basics of artificial intelligence and machine learning through practical examples.",
+    "date": "2026-11-20",
+    "time": "10:00 AM",
+    "venue": "Seminar Hall",
+    "seats": 30,
+    "online": false
+  },
+  {
+    "id": "codesprint-challenge",
+    "title": "CodeSprint Challenge",
+    "category": "Programming",
+    "description": "Test your programming and problem-solving skills in a competitive coding challenge.",
+    "date": "2026-11-28",
+    "time": "2:00 PM",
+    "venue": "Computer Lab",
+    "seats": 0,
+    "online": false
+  },
+  {
+    "id": "campus-cultural-evening",
+    "title": "Campus Cultural Evening",
+    "category": "Cultural",
+    "description": "Enjoy music, performances and creative activities presented by students.",
+    "date": "2026-12-04",
+    "time": "6:00 PM",
+    "venue": "Open Auditorium",
+    "seats": 3,
+    "online": false
+  }
+]

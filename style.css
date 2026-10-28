@@ -12,13 +12,11 @@
   --brand: #24527a;
   --brand-dark: #163b5c;
   --accent: #e76f51;
-
   --ink: #17212b;
   --muted: #64748b;
   --paper: #f5f7fa;
   --surface: #ffffff;
   --border: #d8dee6;
-
   --space: 1rem;
   --container: min(90%, 60rem);
 }
@@ -820,3 +818,64 @@ nav .events {
   No !important is used.
   Conflicts are solved using specificity and source order.
 */
+
+/* =====================================================
+   LAB 6 — INTERACTIVE COMPONENTS
+   ===================================================== */
+
+/* B4: hamburger is visible on narrow screens. */
+.nav-container { display: flex; flex-direction: column; align-items: stretch; }
+.menu-button {
+  display: inline-block;
+  width: fit-content;
+  margin: 0.5rem 0;
+  padding: 0.65rem 1rem;
+  color: white;
+  background: var(--brand);
+  border: 1px solid rgb(255 255 255 / 35%);
+  border-radius: 0.4rem;
+}
+.nav-links { display: none; flex-direction: column; gap: 0.25rem; }
+.nav-links.is-open { display: flex; }
+.nav-links a { display: block; text-decoration: none; border-radius: 0.3rem; }
+
+/* B6: search UI */
+.event-search { margin: 1.5rem 0 1rem; }
+.event-search label { display: block; font-weight: bold; margin-bottom: 0.4rem; }
+.search-row { display: flex; gap: 0.5rem; align-items: stretch; }
+.search-row input { flex: 1; min-width: 0; margin: 0; }
+.search-row button { margin: 0; }
+.search-status { margin-top: 0.5rem; color: var(--muted); font-size: 0.9rem; }
+
+/* B7: loading, success and error messages */
+.event-status { margin: 1rem 0; padding: 0.8rem 1rem; border: 1px solid var(--border); border-radius: 0.5rem; }
+.event-status:empty { display: none; }
+.event-status.error { border-color: #b42318; color: #b42318; }
+.event-status.success { border-color: #23804a; }
+.event-status:empty { padding: 0; margin: 0; border: 0; }
+
+/* Generated event cards retain the existing Lab 5 card design. */
+.event-card { min-width: 0; }
+.event-card .event-type { margin-bottom: 0.5rem; }
+.event-card .event-date { margin-top: 0.65rem; }
+.event-card .seat-status { display: inline-block; margin-top: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.85rem; font-weight: bold; background: #e4f7eb; color: #17643a; }
+.event-card .seat-status.few-left { background: #fff1cf; color: #754900; }
+.event-card .seat-status.full { background: #ffe3e3; color: #8d2020; }
+.event-card.full { border-color: #b42318; }
+.event-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+.event-actions button { margin: 0; }
+.event-actions button:disabled { opacity: 0.55; cursor: not-allowed; }
+.secondary-button { background: var(--surface); color: var(--ink); border-color: var(--border); }
+.form-message { margin-top: 0.75rem; font-weight: bold; }
+.form-message.success { color: #187044; }
+.form-message.error { color: #b42318; }
+
+@media (min-width: 40rem) {
+  .nav-container { flex-direction: row; align-items: center; justify-content: space-between; }
+  .menu-button { display: none; }
+  .nav-links, .nav-links.is-open { display: flex; flex-direction: row; flex-wrap: wrap; gap: 0.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+

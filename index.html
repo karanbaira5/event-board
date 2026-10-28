@@ -13,8 +13,6 @@
   >
   <link rel="shortcut icon" href="images.ico" type="image/x-icon">
 
-  <link rel="icon" href="event-banner.jpg">
-
   <!-- Open Graph -->
   <meta property="og:title" content="Campus Event Board">
   <meta
@@ -72,13 +70,20 @@
 
   <nav class="site-nav" aria-label="Main navigation">
 
-    <div class="container">
+    <div class="container nav-container">
 
-      <a class="active" href="#home">Home</a>
-      <a href="#events">Events</a>
-      <a href="#submit">Submit Event</a>
-      <a href="#schedule">Schedule</a>
-      <a href="#faq">FAQ</a>
+      <button class="menu-button" id="menuButton" type="button"
+        aria-controls="navLinks" aria-expanded="false">
+        ☰ Menu
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#submit">Submit Event</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#faq">FAQ</a>
+      </div>
 
     </div>
 
@@ -129,104 +134,23 @@
       </div>
 
 
-      <div class="event-grid">
-
-        <!-- Event 1 -->
-        <article class="event-card">
-
-          <p class="event-type">Technology</p>
-
-          <h3>AI & Machine Learning Workshop</h3>
-
-          <p>
-            Learn the basics of artificial intelligence and
-            machine learning through practical examples.
-          </p>
-
-          <p>
-            <strong>Date:</strong>
-            <time datetime="2026-09-28">
-              28 September 2026
-            </time>
-          </p>
-
-          <p>
-            <strong>Time:</strong> 10:00 AM
-          </p>
-
-          <p>
-            <strong>Venue:</strong> Seminar Hall
-          </p>
-
-          <a href="#submit">Register</a>
-
-        </article>
-
-
-        <!-- Event 2 -->
-        <article class="event-card">
-
-          <p class="event-type">Programming</p>
-
-          <h3>CodeSprint Challenge</h3>
-
-          <p>
-            Test your programming and problem-solving skills
-            in a competitive coding challenge.
-          </p>
-
-          <p>
-            <strong>Date:</strong>
-            <time datetime="2026-10-02">
-              2 October 2026
-            </time>
-          </p>
-
-          <p>
-            <strong>Time:</strong> 2:00 PM
-          </p>
-
-          <p>
-            <strong>Venue:</strong> Computer Lab
-          </p>
-
-          <a href="#submit">Register</a>
-
-        </article>
-
-
-        <!-- Event 3 -->
-        <article class="event-card">
-
-          <p class="event-type">Cultural</p>
-
-          <h3>Campus Cultural Evening</h3>
-
-          <p>
-            Enjoy music, performances and creative activities
-            presented by students.
-          </p>
-
-          <p>
-            <strong>Date:</strong>
-            <time datetime="2026-10-10">
-              10 October 2026
-            </time>
-          </p>
-
-          <p>
-            <strong>Time:</strong> 6:00 PM
-          </p>
-
-          <p>
-            <strong>Venue:</strong> Open Auditorium
-          </p>
-
-          <a href="#submit">Register</a>
-
-        </article>
-
+      <!-- Lab 6 B6: live search filters the event data as the user types. -->
+      <div class="event-search">
+        <label for="eventSearch">Search events</label>
+        <div class="search-row">
+          <input type="search" id="eventSearch"
+            placeholder="Search title, category, date, or venue"
+            autocomplete="off">
+          <button type="button" id="clearSearch" class="secondary-button">Clear</button>
+        </div>
+        <p id="searchStatus" class="search-status" aria-live="polite">Waiting for events…</p>
       </div>
+
+      <!-- Lab 6 B7: loading/success/error feedback for events.json. -->
+      <p id="eventStatus" class="event-status" role="status" aria-live="polite">Loading…</p>
+
+      <!-- Lab 6 B2: JavaScript creates event cards here from events.json. -->
+      <div class="event-grid" id="eventGrid" aria-label="Campus events"></div>
 
     </section>
 
@@ -296,24 +220,24 @@
       </div>
 
 
-      <form class="event-form" action="#" method="post">
+      <form class="event-form" id="eventForm" action="#" method="post" novalidate>
 
         <fieldset>
 
           <legend>Event Information</legend>
+
+          <label for="organizer-name">Organizer Name</label>
+          <input id="organizer-name" name="organizer-name" type="text"
+            placeholder="Enter your name" required minlength="2"
+            autocomplete="name">
+
 
 
           <label for="event-name">
             Event Name
           </label>
 
-          <input
-            id="event-name"
-            name="event-name"
-            type="text"
-            placeholder="Enter event name"
-            required
-          >
+          <input id="event-name" name="event-name" type="text" placeholder="Enter event name" required >
 
 
           <label for="email">
@@ -350,8 +274,16 @@
             name="description"
             rows="5"
             placeholder="Describe your event"
-            required
+            required minlength="10"
           ></textarea>
+
+          <label for="contact-number">Contact Number (10 digits)</label>
+          <input id="contact-number" name="contact-number" type="tel"
+            placeholder="9876543210" inputmode="numeric"
+            pattern="[0-9]{10}" required
+            title="Enter exactly 10 digits without spaces or country code">
+
+          <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
 
 
           <button type="submit">
@@ -499,6 +431,8 @@
 
   </footer>
 
+  <!-- Lab 6 A1: defer runs the script after the HTML has been parsed. -->
+  <script src="script.js" defer></script>
 </body>
 
 </html>

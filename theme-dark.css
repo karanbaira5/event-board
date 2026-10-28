@@ -159,3 +159,21 @@ body:has(#theme-toggle:checked) .light-icon {
 body:has(#theme-toggle:checked) .dark-icon {
   display: inline;
 }
+
+/* Lab 6: keep newly generated event cards and controls readable in dark mode. */
+body:has(#theme-toggle:checked) .event-status,
+body:has(#theme-toggle:checked) .event-search input,
+body:has(#theme-toggle:checked) .search-row button {
+  background-color: var(--surface);
+  color: var(--ink);
+  border-color: var(--border);
+}
+body:has(#theme-toggle:checked) .event-card .seat-status { background: #174c32; color: #d8ffe7; }
+body:has(#theme-toggle:checked) .event-card .seat-status.few-left { background: #5c4317; color: #fff0c2; }
+body:has(#theme-toggle:checked) .event-card .seat-status.full { background: #612626; color: #ffe1e1; }
+body:has(#theme-toggle:checked) .form-message.success { color: #91e4b3; }
+body:has(#theme-toggle:checked) .form-message.error { color: #ffb4ae; }
+
+
+
+
