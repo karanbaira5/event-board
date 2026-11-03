@@ -1,25 +1,30 @@
-# Campus Event Board
-### CS445 — Lab Assignment 6 | IIIT Vadodara
+# Campus Event Board — CS445 Lab Assignment 7
 
-## 1. Project Overview
+**Institute:** IIIT Vadodara  
+**Course:** CS445 — Basics of Web Programming  
+**Project:** Campus Event Board  
+**Team:** Team Sankalp
 
-The **Campus Event Board** is a web-based application developed to help students discover upcoming events, workshops, competitions, and cultural activities happening on campus.
+## Project Overview
 
-The project uses HTML, CSS, and JavaScript to create an interactive and responsive website. Event information is stored in a JSON file and dynamically displayed using JavaScript.
+Campus Event Board is a web-based platform that displays campus events. It uses JavaScript to dynamically render event cards and demonstrates how the same event data can be represented in JSON and XML.
 
-## 2. Technologies Used
+This project extends the previous lab assignment by adding XML parsing, JSON round-trip conversion, data validation concepts and file-size comparison.
 
-- **HTML5** – Structure of the website.
-- **CSS3** – Styling, responsive layout, and dark theme.
-- **JavaScript** – Dynamic content, event handling, search, and form validation.
-- **JSON** – Storage of campus event information.
-- **Git and GitHub** – Version control and project hosting.
-- **GitHub Pages** – Static website deployment (if enabled).
+## Technologies Used
 
-## 3. Project Structure
+- HTML5
+- CSS3
+- JavaScript
+- JSON
+- XML
+- DOMParser
+- Fetch API
+
+## Project Structure
 
 ```text
-event-board/
+Event Manager/
 │
 ├── index.html
 ├── style.css
@@ -27,176 +32,125 @@ event-board/
 ├── theme-dark.css
 ├── script.js
 ├── events.json
-├── README.md
-├── NOTES_A6.pdf
+├── events.xml
 ├── event-banner.jpg
 ├── images.ico
+├── README.md
+├── Notes.pdf
 │
-└── screenshots/
-    ├── 01-events-rendered.png
-    ├── 02-search-filter.png
-    ├── 03-fetch-loading.png
-    ├── 04-fetch-success.png
-    ├── 05-fetch-error.png
-    ├── 06-form-validation-error.png
-    ├── 07-form-validation-passed.png
-    └── 08-console-output.png
+└── Screenshot/
 ```
 
-*Note: The screenshots folder should be included after adding your actual screenshots. Keep any additional assets required by your project.*
+## Features
 
-## 4. Features
+### Existing Event Board Features
 
-### A. Event Management
-- Events are stored in `events.json`.
-- Event cards are generated dynamically using JavaScript.
-- Each event displays its title, category, date, venue, description, and available seats.
-- Event status is displayed as Open, Few left, or Full.
+- Dynamic event cards
+- Event search and filtering
+- Hamburger navigation
+- Dark mode
+- Event details
+- RSVP interaction
+- Event form validation
+- Responsive layout
 
-### B. Search Functionality
-- Search events by entering keywords.
-- Results update as the user types.
-- Clear button resets the search.
-- Pressing Escape clears the search field.
+### Lab Assignment 7 Features
 
-### C. Responsive Navigation
-- Hamburger menu for smaller screens.
-- Navigation links open and close using JavaScript.
-- Responsive layout for different screen sizes.
+- Event data stored in JSON.
+- The same event data represented in XML.
+- JSON loaded using Fetch API.
+- XML loaded and parsed using DOMParser.
+- First event title accessed from JSON and XML.
+- JSON.stringify() and JSON.parse() round-trip.
+- JSON and XML file-size comparison.
+- Console output for testing.
 
-### D. RSVP Functionality
-- Users can interact with event RSVP buttons.
-- Available seat counts are updated in the current page session.
-- Duplicate RSVP actions are handled using a JavaScript Set.
+## JSON and XML Structure
 
-### E. Event Details
-- Users can click the Details button to view additional event information.
+Each event contains:
 
-### F. Event Submission Form
-- Organizer name validation.
-- Email validation.
-- Event date and description fields.
-- Contact number validation.
-- Built-in HTML validation and custom JavaScript validation.
-- Validation feedback for invalid and valid inputs.
+- id
+- title
+- date
+- seats
+- free
+- online
+- venue
+- description
 
-### G. Fetch API
-The project loads event information using `fetch()` and `async/await`.
+The JSON format uses objects and arrays. The XML format uses an events root element, event child elements, and an id attribute.
 
-It handles three states:
+## How to Run the Project
 
-1. Loading – Displays a loading message while retrieving data.
-2. Success – Displays the event cards after successfully loading JSON.
-3. Error – Displays a friendly message if the data cannot be loaded.
+Do not open the HTML file directly using `file://`, because the browser may block Fetch API requests.
 
-### H. Dark Mode
-- CSS-based dark theme.
-- Theme toggle control.
-- Separate styling for dark-mode elements.
+### Option 1: VS Code Live Server
 
-## 5. JavaScript Concepts Implemented
+1. Open the project folder in VS Code.
+2. Install the Live Server extension if necessary.
+3. Right-click `index.html`.
+4. Select Open with Live Server.
 
-This assignment demonstrates the following JavaScript concepts:
+### Option 2: Python HTTP Server
 
-| Concept | Implementation |
-|---|---|
-| Variables | `const` and `let` |
-| Data types | String, Number, Boolean, Object, Array, Set |
-| Conditions | `if`, `else if`, `else` |
-| Loops | `for...of` |
-| Functions | Functions with parameters and return values |
-| Arrow functions | Arrow functions with `filter()` |
-| DOM selection | `querySelector()`, `querySelectorAll()`, `getElementById()` |
-| DOM manipulation | `createElement()`, `textContent`, `appendChild()` |
-| Events | `addEventListener()` |
-| Event bubbling | `event.target` and event delegation |
-| CSS manipulation | `classList` and attributes |
-| Fetch API | `fetch()`, `async/await`, `try/catch` |
-| Form validation | `required`, `pattern`, `setCustomValidity()` |
-| Debugging | `console.log()` |
-
-## 6. How to Run the Project
-
-### Method 1: VS Code Live Server
-
-1. Download or clone the repository.
-2. Open the project folder in Visual Studio Code.
-3. Install the Live Server extension if it is not already installed.
-4. Right-click `index.html`.
-5. Select **Open with Live Server**.
-6. The website will open in your default browser.
-
-### Method 2: Python Local Server
-
-Open the terminal inside the project folder and execute:
+Open the terminal in the project directory:
 
 ```bash
 python -m http.server 8000
 ```
 
-Open the following address in your browser:
+Open:
 
 ```text
 http://localhost:8000
 ```
 
-**Important:** Do not directly open `index.html` using a `file://` URL because the browser may block the JSON fetch request.
+## JavaScript Concepts Demonstrated
 
-## 7. Testing
+- const and let
+- Arrays and objects
+- Functions and return values
+- Arrow functions
+- Array filter()
+- for...of loop
+- DOM manipulation
+- Event listeners and event bubbling
+- Fetch API and async/await
+- JSON.stringify() and JSON.parse()
+- DOMParser
+- XML element access
+- TextEncoder and byte-size calculation
+- Form validation
+- try/catch error handling
 
-The following features should be tested:
+## Important Limitations
 
-- Event cards loading from JSON.
-- Search filtering.
-- Escape-to-clear functionality.
-- Hamburger menu.
-- RSVP functionality.
-- Event Details button.
-- Loading, Success, and Error states.
-- Invalid form submission.
-- Valid form submission.
-- Dark theme.
-- Browser Console output.
+- RSVP changes only the current browser session's data.
+- Event proposals are not stored in a database.
+- The project does not have a backend.
+- JSON and XML are demonstration data files.
+- Client-side validation does not replace server-side validation.
 
-Screenshots demonstrating these features are included in the project submission.
+## Screenshots
 
-## 8. Project Limitations
+Add your actual assignment screenshots to the `Screenshot/` folder.
 
-- RSVP changes are stored only in the current page's memory. They are not saved permanently.
-- The event submission form performs client-side validation but does not send event proposals to a server.
-- The project does not include a database or user authentication.
-- Server-side validation and permanent event storage are not implemented.
-- Event information is demonstration data stored in `events.json`.
+Recommended screenshots:
 
-## 9. GitHub Repository
+1. Event cards rendered from JSON.
+2. First XML event title displayed on the page.
+3. JSON round-trip output.
+4. JSON and XML byte-size comparison.
+5. Invalid JSON validator error.
+6. Corrected valid JSON.
+7. Browser console output.
 
-**Repository:**  
-https://github.com/karanbaira/event-board
+## GitHub Repository
 
-**Live Website:**  
-Add your verified GitHub Pages URL here if deployment is enabled.
+Repository: https://github.com/karanbaira5/event-board
 
-## 10. Assignment Information
+Live website: Add the verified GitHub Pages URL if enabled.
 
-**Course:** CS445  
-**Assignment:** Lab Assignment 6  
-**Project:** Campus Event Board  
-**Institute:** IIIT Vadodara
+## Conclusion
 
-**Team Name:** Team Sankalp
-
-**Team Members:**
-- Name: ____________________
-- Roll Number: ______________
-
-(Add all team members.)
-
----
-
-## 11. Conclusion
-
-The Campus Event Board project demonstrates the practical implementation of JavaScript fundamentals, DOM manipulation, event handling, JSON data management, Fetch API, and form validation.
-
-It provides an interactive platform for displaying and exploring campus events while demonstrating the concepts covered in Lab Assignment 6.
-
-**End of README**
+This project demonstrates the use of JSON and XML for representing structured event data. It also demonstrates how JavaScript can fetch, parse, access, compare and display data in a web application.

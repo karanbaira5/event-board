@@ -1,438 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Campus Event Board</title>
+    <title>Campus Event Board</title>
 
-  <meta
-    name="description"
-    content="Campus Event Board for discovering and submitting campus events."
-  >
-  <link rel="shortcut icon" href="images.ico" type="image/x-icon">
+    <meta
+      name="description"
+      content="Campus Event Board for discovering and submitting campus events.">
+    <link rel="shortcut icon" href="images.ico" type="image/x-icon">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Campus Event Board">
-  <meta
-    property="og:description"
-    content="Discover upcoming campus events and submit new events."
-  >
-  <meta property="og:image" content="event-banner.jpg">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Campus Event Board">
+    <meta
+      property="og:description"
+      content="Discover upcoming campus events and submit new events.">
+    <meta property="og:image" content="event-banner.jpg">
 
-  <!-- External CSS files -->
-  <link rel="stylesheet" href="base.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="theme-dark.css">
+    <!-- External CSS files -->
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme-dark.css">
 
-</head>
+  </head>
 
+  <body>
 
-<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main" class="skip">Skip to content</a>
 
-  <!-- Skip link for accessibility -->
-  <a href="#main" class="skip">Skip to content</a>
+    <!-- ================= HEADER ================= -->
 
-
-  <!-- ================= HEADER ================= -->
-
-  <header id="site-header">
-
-    <div class="container">
-
-      <p class="eyebrow">IIIT Vadodara</p>
-
-      <h1>Campus Event Board</h1>
-
-      <p>
-        Discover workshops, competitions and activities happening
-        on campus.
-      </p>
-
-      <div class="theme-switcher">
-      <input type="checkbox" id="theme-toggle">
-
-      <label for="theme-toggle">
-        <span class="light-icon">☀️</span>
-        <span class="dark-icon">🌙</span>
-        Theme
-      </label>
-    </div>
-
-
-    </div>
-
-  </header>
-
-
-  <!-- ================= NAVIGATION ================= -->
-
-  <nav class="site-nav" aria-label="Main navigation">
-
-    <div class="container nav-container">
-
-      <button class="menu-button" id="menuButton" type="button"
-        aria-controls="navLinks" aria-expanded="false">
-        ☰ Menu
-      </button>
-
-      <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#events">Events</a>
-        <a href="#submit">Submit Event</a>
-        <a href="#schedule">Schedule</a>
-        <a href="#faq">FAQ</a>
-      </div>
-
-    </div>
-
-  </nav>
-
-
-  <!-- ================= MAIN ================= -->
-
-  <main id="main">
-
-    <!-- ================= HERO ================= -->
-
-    <section id="home" class="hero">
+    <header id="site-header">
 
       <div class="container">
 
-        <p class="eyebrow">Campus Life</p>
+        <p class="eyebrow">IIIT Vadodara</p>
 
-        <h2>What's happening on campus?</h2>
-
-        <p>
-          Find upcoming events, workshops and activities in one place.
-        </p>
-
-        <a class="button" href="#events">
-          View Events
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= UPCOMING EVENTS ================= -->
-
-    <section id="events" class="events container">
-
-      <div class="section-heading">
-
-        <p class="eyebrow">Upcoming</p>
-
-        <h2>Upcoming Events</h2>
+        <h1>Campus Event Board</h1>
 
         <p>
-          Explore our upcoming campus events.
+          Discover workshops, competitions and activities happening
+          on campus.
         </p>
 
-      </div>
+        <div class="theme-switcher">
+          <input type="checkbox" id="theme-toggle">
 
-
-      <!-- Lab 6 B6: live search filters the event data as the user types. -->
-      <div class="event-search">
-        <label for="eventSearch">Search events</label>
-        <div class="search-row">
-          <input type="search" id="eventSearch"
-            placeholder="Search title, category, date, or venue"
-            autocomplete="off">
-          <button type="button" id="clearSearch" class="secondary-button">Clear</button>
+          <label for="theme-toggle">
+            <span class="light-icon">☀️</span>
+            <span class="dark-icon">🌙</span>
+            Theme
+          </label>
         </div>
-        <p id="searchStatus" class="search-status" aria-live="polite">Waiting for events…</p>
+
       </div>
 
-      <!-- Lab 6 B7: loading/success/error feedback for events.json. -->
-      <p id="eventStatus" class="event-status" role="status" aria-live="polite">Loading…</p>
+    </header>
 
-      <!-- Lab 6 B2: JavaScript creates event cards here from events.json. -->
-      <div class="event-grid" id="eventGrid" aria-label="Campus events"></div>
+    <!-- ================= NAVIGATION ================= -->
 
-    </section>
+    <nav class="site-nav" aria-label="Main navigation">
 
+      <div class="container nav-container">
 
-    <!-- ================= IMAGE / ABOUT ================= -->
+        <button class="menu-button" id="menuButton" type="button"
+          aria-controls="navLinks" aria-expanded="false">
+          ☰ Menu
+        </button>
 
-    <section class="about container">
+        <div class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#events">Events</a>
+          <a href="#submit">Submit Event</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#faq">FAQ</a>
+        </div>
 
-      <div>
+      </div>
 
-        <p class="eyebrow">About</p>
+    </nav>
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main">
+
+      <!-- ================= HERO ================= -->
+
+      <section id="home" class="hero">
+
+        <div class="container">
+
+          <p class="eyebrow">Campus Life</p>
+
+          <h2>What's happening on campus?</h2>
+
+          <p>
+            Find upcoming events, workshops and activities in one place.
+          </p>
+
+          <a class="button" href="#events">
+            View Events
+          </a>
+
+        </div>
+
+      </section>
+
+      <!-- ================= UPCOMING EVENTS ================= -->
+
+      <section id="events" class="events container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">Upcoming</p>
+
+          <h2>Upcoming Events</h2>
+
+          <p>
+            Explore our upcoming campus events.
+          </p>
+
+        </div>
+
+        <!-- Lab 6 B6: live search filters the event data as the user types. -->
+        <div class="event-search">
+          <label for="eventSearch">Search events</label>
+          <div class="search-row">
+            <input type="search" id="eventSearch"
+              placeholder="Search title, category, date, or venue"
+              autocomplete="off">
+            <button type="button" id="clearSearch"
+              class="secondary-button">Clear</button>
+          </div>
+          <p id="searchStatus" class="search-status" aria-live="polite">Waiting
+            for events…</p>
+        </div>
+
+        <!-- Lab 6 B7: loading/success/error feedback for events.json. -->
+        <p id="eventStatus" class="event-status" role="status"
+          aria-live="polite">Loading…</p>
+
+        <!-- Lab 6 B2: JavaScript creates event cards here from events.json. -->
+        <div class="event-grid" id="eventGrid" aria-label="Campus events"></div>
+
+      </section>
+
+      <!-- LAB 7: JSON and XML demonstration -->
+      <!-- LAB 7: JSON AND XML DEMONSTRATION -->
+<section class="data-demo" id="data-demo">
+    <div class="container">
+
+        <h2>JSON & XML Data Demonstration</h2>
+
+        <p>
+            The events displayed above are loaded from JSON.
+            This section demonstrates reading the same data from XML.
+        </p>
+
+        <!-- XML TITLE CARD -->
+        <div class="data-demo-card">
+            <h3>First Event Title from XML</h3>
+
+            <p id="xmlTitleResult" aria-live="polite">
+                Loading XML data...
+            </p>
+        </div>
+
+        <!-- JSON ROUND-TRIP CARD -->
+        <div class="data-demo-card json-roundtrip-card">
+            <h3>JSON Round-trip</h3>
+
+            <p id="jsonRoundTrip" aria-live="polite">
+                Checking JSON data...
+            </p>
+
+            <div class="roundtrip-results">
+
+                <div class="roundtrip-item">
+                    <span class="roundtrip-number" id="verifiedEvents">0</span>
+                    <span class="roundtrip-label">Events Verified</span>
+                </div>
+
+                <div class="roundtrip-item">
+                    <span class="roundtrip-number" id="matchStatus">Checking...</span>
+                    <span class="roundtrip-label">Data Comparison</span>
+                </div>
+
+            </div>
+
+            <p class="roundtrip-description">
+                JavaScript Object → JSON String → JavaScript Object
+            </p>
+        </div>
+
+        <!-- FILE SIZE CARD -->
+        <div class="data-demo-card">
+            <h3>JSON vs XML File Size</h3>
+
+            <p id="sizeComparison" aria-live="polite">
+                Calculating file sizes...
+            </p>
+        </div>
+
+    </div>
+</section>
+
+      <!-- ================= IMAGE / ABOUT ================= -->
+
+      <section class="about container">
+
+        <div>
+
+          <p class="eyebrow">About</p>
+
+          <h2>Campus Event Board</h2>
+
+          <h2 class="small-heading">Stay Connected</h2>
+
+          <p>
+            The Campus Event Board helps students discover
+            useful academic, technical and cultural activities.
+          </p>
+
+          <p>
+            Visit the
+            <a
+              href="https://www.iiitvadodara.ac.in"
+              target="_blank"
+              rel="noopener">
+              institute website
+            </a>
+            for more information.
+          </p>
+
+        </div>
+
+        <figure>
+
+          <img
+            src="event-banner.jpg"
+            alt="Students participating in a campus event">
+
+          <figcaption>
+            Students participating in a campus event.
+          </figcaption>
+
+        </figure>
+
+      </section>
+
+      <!-- ================= FORM ================= -->
+
+      <section id="submit" class="submit-section container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">Create</p>
+
+          <h2>Submit an Event</h2>
+
+          <p>
+            Fill in the form to submit a new campus event.
+          </p>
+
+        </div>
+
+        <form class="event-form" id="eventForm" action="#" method="post"
+          novalidate>
+
+          <fieldset>
+
+            <legend>Event Information</legend>
+
+            <label for="organizer-name">Organizer Name</label>
+            <input id="organizer-name" name="organizer-name" type="text"
+              placeholder="Enter your name" required minlength="2"
+              autocomplete="name">
+
+            <label for="event-name">
+              Event Name
+            </label>
+
+            <input id="event-name" name="event-name" type="text"
+              placeholder="Enter event name" required>
+
+            <label for="email">
+              Organizer Email
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="student@example.com"
+              required>
+
+            <label for="date">
+              Event Date
+            </label>
+
+            <input
+              id="date"
+              name="date"
+              type="date"
+              required>
+
+            <label for="description">
+              Description
+            </label>
+
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              placeholder="Describe your event"
+              required minlength="10"></textarea>
+
+            <label for="contact-number">Contact Number (10 digits)</label>
+            <input id="contact-number" name="contact-number" type="tel"
+              placeholder="9876543210" inputmode="numeric"
+              pattern="[0-9]{10}" required
+              title="Enter exactly 10 digits without spaces or country code">
+
+            <p id="formMessage" class="form-message" role="status"
+              aria-live="polite"></p>
+
+            <button type="submit">
+              Submit Event
+            </button>
+
+          </fieldset>
+
+        </form>
+
+      </section>
+
+      <!-- ================= TABLE ================= -->
+
+      <section id="schedule" class="schedule container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">Schedule</p>
+
+          <h2>Event Schedule</h2>
+
+        </div>
+
+        <table>
+
+          <caption>
+            Campus event categories
+          </caption>
+
+          <thead>
+
+            <tr>
+              <th scope="col">Category</th>
+              <th scope="col">Day</th>
+              <th scope="col">Venue</th>
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>Technology</td>
+              <td>Monday</td>
+              <td>Computer Lab</td>
+            </tr>
+
+            <tr>
+              <td>Programming</td>
+              <td>Tuesday</td>
+              <td>Programming Lab</td>
+            </tr>
+
+            <tr>
+              <td>Cultural</td>
+              <td>Friday</td>
+              <td>Auditorium</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </section>
+
+      <!-- ================= FAQ ================= -->
+
+      <section id="faq" class="faq container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">Help</p>
+
+          <h2>Frequently Asked Questions</h2>
+
+        </div>
+
+        <details>
+
+          <summary>
+            How can I submit an event?
+          </summary>
+
+          <p>
+            Fill in the Submit an Event form with the required
+            information and click Submit Event.
+          </p>
+
+        </details>
+
+        <details>
+
+          <summary>
+            Can students attend campus events?
+          </summary>
+
+          <p>
+            Students can attend events according to the rules
+            specified by the event organizer.
+          </p>
+
+        </details>
+
+      </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+      <div class="container">
 
         <h2>Campus Event Board</h2>
 
-        <h2 class="small-heading">Stay Connected</h2>
+        <nav aria-label="Footer navigation">
 
-        <p>
-          The Campus Event Board helps students discover
-          useful academic, technical and cultural activities.
-        </p>
+          <a href="#home">Home</a>
+          <a href="#events">Events</a>
+          <a href="#submit">Submit Event</a>
 
-        <p>
-          Visit the
-          <a
-            href="https://www.iiitvadodara.ac.in"
-            target="_blank"
-            rel="noopener"
-          >
-            institute website
+        </nav>
+
+        <address>
+          Contact:
+          <a href="mailto:karanbaira5775@gmail.com">
+            karanbaira5775@gmail.com
           </a>
-          for more information.
-        </p>
-
-      </div>
-
-
-      <figure>
-
-        <img
-          src="event-banner.jpg"
-          alt="Students participating in a campus event"
-        >
-
-        <figcaption>
-          Students participating in a campus event.
-        </figcaption>
-
-      </figure>
-
-    </section>
-
-
-    <!-- ================= FORM ================= -->
-
-    <section id="submit" class="submit-section container">
-
-      <div class="section-heading">
-
-        <p class="eyebrow">Create</p>
-
-        <h2>Submit an Event</h2>
+        </address>
 
         <p>
-          Fill in the form to submit a new campus event.
+          <small>
+            © 2026 Sankalp Campus Event Board
+          </small>
         </p>
 
       </div>
 
-
-      <form class="event-form" id="eventForm" action="#" method="post" novalidate>
-
-        <fieldset>
-
-          <legend>Event Information</legend>
-
-          <label for="organizer-name">Organizer Name</label>
-          <input id="organizer-name" name="organizer-name" type="text"
-            placeholder="Enter your name" required minlength="2"
-            autocomplete="name">
-
-
-
-          <label for="event-name">
-            Event Name
-          </label>
-
-          <input id="event-name" name="event-name" type="text" placeholder="Enter event name" required >
-
-
-          <label for="email">
-            Organizer Email
-          </label>
-
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="student@example.com"
-            required
-          >
-
-
-          <label for="date">
-            Event Date
-          </label>
-
-          <input
-            id="date"
-            name="date"
-            type="date"
-            required
-          >
-
-
-          <label for="description">
-            Description
-          </label>
-
-          <textarea
-            id="description"
-            name="description"
-            rows="5"
-            placeholder="Describe your event"
-            required minlength="10"
-          ></textarea>
-
-          <label for="contact-number">Contact Number (10 digits)</label>
-          <input id="contact-number" name="contact-number" type="tel"
-            placeholder="9876543210" inputmode="numeric"
-            pattern="[0-9]{10}" required
-            title="Enter exactly 10 digits without spaces or country code">
-
-          <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
-
-
-          <button type="submit">
-            Submit Event
-          </button>
-
-        </fieldset>
-
-      </form>
-
-    </section>
-
-
-    <!-- ================= TABLE ================= -->
-
-    <section id="schedule" class="schedule container">
-
-      <div class="section-heading">
-
-        <p class="eyebrow">Schedule</p>
-
-        <h2>Event Schedule</h2>
-
-      </div>
-
-
-      <table>
-
-        <caption>
-          Campus event categories
-        </caption>
-
-        <thead>
-
-          <tr>
-            <th scope="col">Category</th>
-            <th scope="col">Day</th>
-            <th scope="col">Venue</th>
-          </tr>
-
-        </thead>
-
-        <tbody>
-
-          <tr>
-            <td>Technology</td>
-            <td>Monday</td>
-            <td>Computer Lab</td>
-          </tr>
-
-          <tr>
-            <td>Programming</td>
-            <td>Tuesday</td>
-            <td>Programming Lab</td>
-          </tr>
-
-          <tr>
-            <td>Cultural</td>
-            <td>Friday</td>
-            <td>Auditorium</td>
-          </tr>
-
-        </tbody>
-
-      </table>
-
-    </section>
-
-
-    <!-- ================= FAQ ================= -->
-
-    <section id="faq" class="faq container">
-
-      <div class="section-heading">
-
-        <p class="eyebrow">Help</p>
-
-        <h2>Frequently Asked Questions</h2>
-
-      </div>
-
-
-      <details>
-
-        <summary>
-          How can I submit an event?
-        </summary>
-
-        <p>
-          Fill in the Submit an Event form with the required
-          information and click Submit Event.
-        </p>
-
-      </details>
-
-
-      <details>
-
-        <summary>
-          Can students attend campus events?
-        </summary>
-
-        <p>
-          Students can attend events according to the rules
-          specified by the event organizer.
-        </p>
-
-      </details>
-
-    </section>
-
-  </main>
-
-
-  <!-- ================= FOOTER ================= -->
-
-  <footer>
-
-    <div class="container">
-
-      <h2>Campus Event Board</h2>
-
-      <nav aria-label="Footer navigation">
-
-        <a href="#home">Home</a>
-        <a href="#events">Events</a>
-        <a href="#submit">Submit Event</a>
-
-      </nav>
-
-      <address>
-        Contact:
-        <a href="mailto:karanbaira5775@gmail.com">
-          karanbaira5775@gmail.com
-        </a>
-      </address>
-
-      <p>
-        <small>
-          © 2026 Sankalp Campus Event Board
-        </small>
-      </p>
-
-    </div>
-
-  </footer>
-
-  <!-- Lab 6 A1: defer runs the script after the HTML has been parsed. -->
-  <script src="script.js" defer></script>
-</body>
+    </footer>
+
+    <!-- Lab 6 A1: defer runs the script after the HTML has been parsed. -->
+    <script src="script.js" defer></script>
+  </body>
 
 </html>

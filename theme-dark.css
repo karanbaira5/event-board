@@ -3,11 +3,9 @@
    Dark theme for Campus Event Board
    ===================================================== */
 
-
 /* Dark theme variables */
 
 body:has(#theme-toggle:checked) {
-
   --brand: #78aee0;
   --brand-dark: #081522;
   --accent: #ff9b7d;
@@ -17,9 +15,7 @@ body:has(#theme-toggle:checked) {
   --paper: #101820;
   --surface: #192633;
   --border: #394b5c;
-
 }
-
 
 /* Body */
 
@@ -28,13 +24,11 @@ body:has(#theme-toggle:checked) {
   background-color: var(--paper);
 }
 
-
 /* Header */
 
 body:has(#theme-toggle:checked) #site-header {
   background-color: #07111b;
 }
-
 
 /* Navigation */
 
@@ -42,18 +36,12 @@ body:has(#theme-toggle:checked) .site-nav {
   background-color: #081522;
 }
 
-
 /* Hero */
 
 body:has(#theme-toggle:checked) .hero {
   background-image:
-    linear-gradient(
-      rgb(0 0 0 / 55%),
-      rgb(0 0 0 / 55%)
-    ),
-    url("event-banner.jpg");
+    linear-gradient(rgb(0 0 0 / 55%), rgb(0 0 0 / 55%)), url("event-banner.jpg");
 }
-
 
 /* Event cards */
 
@@ -65,7 +53,6 @@ body:has(#theme-toggle:checked) .event-card {
   border-color: var(--border);
 }
 
-
 /* About section */
 
 body:has(#theme-toggle:checked) .about figure {
@@ -74,7 +61,6 @@ body:has(#theme-toggle:checked) .about figure {
   border-color: var(--border);
 }
 
-
 /* Form */
 
 body:has(#theme-toggle:checked) .event-form {
@@ -82,7 +68,6 @@ body:has(#theme-toggle:checked) .event-form {
 
   border-color: var(--border);
 }
-
 
 body:has(#theme-toggle:checked) .event-form input,
 body:has(#theme-toggle:checked) .event-form textarea {
@@ -93,7 +78,6 @@ body:has(#theme-toggle:checked) .event-form textarea {
   border-color: var(--border);
 }
 
-
 /* FAQ */
 
 body:has(#theme-toggle:checked) .faq details {
@@ -101,7 +85,6 @@ body:has(#theme-toggle:checked) .faq details {
 
   border-color: var(--border);
 }
-
 
 /* Table */
 
@@ -111,17 +94,14 @@ body:has(#theme-toggle:checked) table {
   border-color: var(--border);
 }
 
-
 body:has(#theme-toggle:checked) th,
 body:has(#theme-toggle:checked) td {
   border-color: var(--border);
 }
 
-
 body:has(#theme-toggle:checked) tbody tr:nth-child(even) {
   background-color: rgb(120 174 224 / 10%);
 }
-
 
 /* Headings */
 
@@ -133,7 +113,6 @@ body:has(#theme-toggle:checked) .faq summary {
   color: #78aee0;
 }
 
-
 /* Muted text */
 
 body:has(#theme-toggle:checked) .event-card p,
@@ -141,20 +120,17 @@ body:has(#theme-toggle:checked) .about figcaption {
   color: #b7c5d3;
 }
 
-
 /* Footer */
 
 body:has(#theme-toggle:checked) footer {
   background-color: #07111b;
 }
 
-
 /* Change theme icon */
 
 body:has(#theme-toggle:checked) .light-icon {
   display: none;
 }
-
 
 body:has(#theme-toggle:checked) .dark-icon {
   display: inline;
@@ -168,12 +144,54 @@ body:has(#theme-toggle:checked) .search-row button {
   color: var(--ink);
   border-color: var(--border);
 }
-body:has(#theme-toggle:checked) .event-card .seat-status { background: #174c32; color: #d8ffe7; }
-body:has(#theme-toggle:checked) .event-card .seat-status.few-left { background: #5c4317; color: #fff0c2; }
-body:has(#theme-toggle:checked) .event-card .seat-status.full { background: #612626; color: #ffe1e1; }
-body:has(#theme-toggle:checked) .form-message.success { color: #91e4b3; }
-body:has(#theme-toggle:checked) .form-message.error { color: #ffb4ae; }
+body:has(#theme-toggle:checked) .event-card .seat-status {
+  background: #174c32;
+  color: #d8ffe7;
+}
+body:has(#theme-toggle:checked) .event-card .seat-status.few-left {
+  background: #5c4317;
+  color: #fff0c2;
+}
+body:has(#theme-toggle:checked) .event-card .seat-status.full {
+  background: #612626;
+  color: #ffe1e1;
+}
+body:has(#theme-toggle:checked) .form-message.success {
+  color: #91e4b3;
+}
+body:has(#theme-toggle:checked) .form-message.error {
+  color: #ffb4ae;
+}
 
+/* LAB 7 — Dark theme for JSON and XML demonstration */
 
+body:has(#theme-toggle:checked) .data-demo-card {
+  background: #202020;
+  border-color: #444444;
+  color: #f5f5f5;
+}
 
+body:has(#theme-toggle:checked) .data-demo-card pre {
+  background: #151515;
+  color: #f5f5f5;
+}
 
+body:has(#theme-toggle:checked) .event-details {
+  background: #303030;
+  color: #f5f5f5;
+}
+
+body:has(#theme-toggle:checked) .event-status.open {
+  background: #14532d;
+  color: #dcfce7;
+}
+
+body:has(#theme-toggle:checked) .event-status.few-left {
+  background: #78350f;
+  color: #fef3c7;
+}
+
+body:has(#theme-toggle:checked) .event-status.full {
+  background: #7f1d1d;
+  color: #fee2e2;
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events>
+    <event id="1">
+        <title>AI &amp; Machine Learning Workshop</title>
+        <date>2026-11-20</date>
+        <seats>30</seats>
+        <free>true</free>
+        <online>false</online>
+        <venue>Computer Lab 1</venue>
+        <description>Learn the fundamentals of artificial intelligence and machine learning through practical demonstrations.</description>
+    </event>
+
+    <event id="2">
+        <title>CodeSprint Challenge</title>
+        <date>2026-11-22</date>
+        <seats>0</seats>
+        <free>true</free>
+        <online>false</online>
+        <venue>Main Auditorium</venue>
+        <description>Participate in a competitive programming challenge and test your coding skills.</description>
+    </event>
+
+    <event id="3">
+        <title>Campus Cultural Evening</title>
+        <date>2026-11-25</date>
+        <seats>3</seats>
+        <free>false</free>
+        <online>false</online>
+        <venue>Open Air Theatre</venue>
+        <description>Enjoy music, dance, performances and cultural activities.</description>
+    </event>
+
+    <event id="4">
+        <title>Cyber Security Webinar</title>
+        <date>2026-11-28</date>
+        <seats>50</seats>
+        <free>true</free>
+        <online>true</online>
+        <venue>Online</venue>
+        <description>Understand cybersecurity basics, common threats and practical safety measures.</description>
+    </event>
+</events>
